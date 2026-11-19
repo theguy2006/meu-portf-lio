@@ -1,5 +1,5 @@
 /* CAUÃ FRANCO — PORTFÓLIO
-   Identidade: brutalista, editorial e moderna.
+    Identidade: brutalista, editorial e moderna.
    Edite as variáveis abaixo para personalizar as cores. */
 :root {
   --paper: #f1f0e8;
@@ -13,6 +13,7 @@
 }
 * {
   box-sizing: border-box;
+  transition: 0.2s;
 }
 html {
   scroll-behavior: smooth;
@@ -330,13 +331,26 @@ backdrop-filter: blur(10px);
   align-items: center;
 }
 .project-visual {
-  min-height: 300px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  position: relative;
+    padding: 0;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.project-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+.project-featured .project-info {
+    padding: 0;
+}
+
+.project-visual:hover img {
+    transform: scale(1.04);
+    
 }
 .project-featured .project-visual {
   min-height: 390px;
@@ -380,10 +394,18 @@ backdrop-filter: blur(10px);
   line-height: 0.85;
   letter-spacing: -0.07em;
 }
-.fitness-mark span {
-  font-size: 15px;
-  letter-spacing: 0.25em;
+.sfs{
+  font-size: clamp(38px, 5vw, 65px);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+  color: goldenrod;
 }
+.imgs-hover{
+  display: flex;
+  gap: 5px;
+}
+
 .visual-cine {
   background: #202d45;
   color: #fff;
@@ -395,7 +417,7 @@ backdrop-filter: blur(10px);
   line-height: 0.9;
 }
 .cine-title span {
-  color: #79baff;
+  color: #7d7d7d;
 }
 .cine-title small {
   display: block;
@@ -536,6 +558,7 @@ backdrop-filter: blur(10px);
   transition: opacity 0.2s;
   z-index: 5;
 }
+
 .back-top.visible {
   opacity: 1;
   pointer-events: auto;
@@ -573,10 +596,13 @@ backdrop-filter: blur(10px);
   .about-grid {
     gap: 35px;
   }
-  .project-featured {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
+.project-featured .project-visual {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    padding: 0;
+    overflow: hidden;
+}
   .project-featured .project-visual {
     min-height: 330px;
   }
@@ -671,7 +697,7 @@ backdrop-filter: blur(10px);
   .skills-intro,
   .projects-title {
     display: block;
-    margin: 55px 0 40px;
+    margin: 45px 0 35px;
   }
   .skills-intro p,
   .projects-title p {
@@ -694,7 +720,7 @@ backdrop-filter: blur(10px);
   }
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 38px;
+    gap: 35px 24px;
   }
   .project-featured {
     grid-column: auto;
