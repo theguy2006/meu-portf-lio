@@ -137,6 +137,7 @@ backdrop-filter: blur(10px);
 }
 .hero h1 {
   margin: 20px 0 25px;
+  margin-left: -20px;
   font-size: clamp(76px, 11.7vw, 164px);
   line-height: 0.78;
   letter-spacing: -0.105em;
