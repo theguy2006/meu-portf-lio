@@ -425,6 +425,7 @@ backdrop-filter: blur(10px);
   font: 9px var(--mono);
   letter-spacing: 0.08em;
 }
+
 .project-info {
   padding: 18px 0 0;
 }
@@ -730,7 +731,10 @@ backdrop-filter: blur(10px);
     min-height: 270px;
   }
   .visual-word {
-    font-size: 70px;
+    font-size: 50px;
+  }
+  .uv{
+    color: rgb(2, 166, 203);
   }
   .contact-main {
     padding: 75px 0 65px;
