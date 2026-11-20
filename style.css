@@ -417,6 +417,15 @@ backdrop-filter: blur(10px);
   letter-spacing: -0.09em;
   line-height: 0.9;
 }
+.barber{
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.09em;
+  line-height: 0.9;
+  span{
+    color: #C49A50;
+  }
+}
 .cine-title span {
   color: #7d7d7d;
 }
